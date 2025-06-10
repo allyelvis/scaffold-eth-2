@@ -1,0 +1,168 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Staked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Unstaked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalStaked",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stake",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stakedAmounts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "unstake",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getTotalStaked()": {
+					"details": "Returns the total amount of ETH staked in the contract."
+				},
+				"stake()": {
+					"details": "Allows users to stake ETH. The amount sent with the transaction is recorded as staked."
+				},
+				"unstake(uint256)": {
+					"details": "Allows users to unstake their ETH.",
+					"params": {
+						"amount": "The amount of ETH to unstake."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleETHStaking.sol": "SimpleETHStaking"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": [
+			":@openzeppelin/contracts/=lib/v4-periphery/lib/openzeppelin-contracts/contracts/",
+			":@uniswap/v4-core/=lib/v4-periphery/lib/v4-core/",
+			":ds-test/=lib/forge-std/lib/ds-test/src/",
+			":forge-gas-snapshot/=lib/v4-periphery/lib/forge-gas-snapshot/src/",
+			":forge-std/=lib/forge-std/src/",
+			":openzeppelin-contracts/=lib/v4-periphery/lib/openzeppelin-contracts/",
+			":solmate/=lib/v4-periphery/lib/v4-core/lib/solmate/src/",
+			":v4-periphery/=lib/v4-periphery/contracts/",
+			"lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+			"lib/v4-periphery/lib/v4-core:@openzeppelin/contracts/=lib/v4-periphery/lib/openzeppelin-contracts/contracts/",
+			"lib/v4-periphery:@openzeppelin/contracts/=lib/v4-periphery/lib/openzeppelin-contracts/contracts/",
+			"lib/v4-periphery:@uniswap/v4-core/=lib/v4-periphery/lib/v4-core/",
+			"lib/v4-periphery:ds-test/=lib/v4-periphery/lib/forge-std/lib/ds-test/src/",
+			"lib/v4-periphery:forge-gas-snapshot/=lib/v4-periphery/lib/forge-gas-snapshot/src/",
+			"lib/v4-periphery:forge-std/=lib/v4-periphery/lib/forge-std/src/",
+			"lib/v4-periphery:openzeppelin-contracts/=lib/v4-periphery/lib/openzeppelin-contracts/",
+			"lib/v4-periphery:solmate/=lib/v4-periphery/lib/v4-core/lib/solmate/src/",
+			"lib/v4-periphery:v4-core/=lib/v4-periphery/lib/v4-core/contracts/"
+		]
+	},
+	"sources": {
+		"contracts/SimpleETHStaking.sol": {
+			"keccak256": "0x5b732c018ad02a49527bec22b9cb4872eec92f8d4030055bb2873d2c6a462375",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://30076fc6eb91becd694054a8a3f55459f2d3e4c7929b45c83992f7eb090ce549",
+				"dweb:/ipfs/QmaTcW723ciJUMQ3MSjTSX4HzpudPjcHucLbgHsQXSKDmv"
+			]
+		}
+	},
+	"version": 1
+}
